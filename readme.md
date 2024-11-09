@@ -7,7 +7,7 @@
 </div>
 
 > [!NOTE]
-> ***This project has been updated to replace using twitters api to  [Bluesky](https://bsky.app/)'s API. The original project can be found [here](https://github.com/mriffey1/lorcana-scraper-2023).***
+> ***This project is being updated to move from twitters api to [Bluesky](https://bsky.app/)'s API. The original project can be found [here](https://github.com/mriffey1/lorcana-scraper-2023).***
 
 
 <h3 align="center">Lorcana Web Scraper</h3>
