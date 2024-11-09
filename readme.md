@@ -13,7 +13,7 @@
 <h3 align="center">Lorcana Web Scraper</h3>
 
   <p align="center">
-    Python script created to obtain ticket availability for Lorcana events at Gen Con and tweet when tickets are available.
+    TypeScript script created to obtain ticket availability for Lorcana events at Gen Con and tweet when tickets are available.
 
 </div>
 
