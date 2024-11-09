@@ -66,14 +66,56 @@ The screenshot below shows when an event has been tweeted that has tickets by pr
 
 ### Built With
 <div align="center">
+<table>
+  <tr>
+    <td align="center">
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)</br>
-![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)
-![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)</br>
-![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
-![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+  ![DOTENV](https://img.shields.io/badge/DOTENV-ECD53F?style=for-the-badge&logo=DOTENV&logoColor=black)
+
+  </td>
+    <td align="center">
+    
+  ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white)
+    
+  </td>
+  <td align="center">
+    
+  ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+  </td>
+  </tr>
+  <tr>
+  <td align="center">
+
+  ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)
+
+  </td>
+  <td align="center">
+    
+  ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
+    
+  </td>
+  <td align="center">
+    
+  ![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
+
+  </td>
+  </tr>
+  <tr>
+  <td align="center">
+
+  ![BlueSky](https://img.shields.io/badge/BlueSky-0285FF.svg?style=for-the-badge&logo=BlueSky&logoColor=white)
+
+  </td>
+  <td align="center">
+    
+  ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
+  </td>
+  <td align="center">
+  </td>
+  </tr>
+ </table>
 
 </div>
 
