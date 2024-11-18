@@ -1,6 +1,7 @@
 import * as dotenv from 'dotenv';
 import puppeteer from 'puppeteer';
 import * as mariadb from 'mariadb';
+import { formatTweet } from './bluesky';
 
 dotenv.config();
 
@@ -17,7 +18,7 @@ async function openPagesAndPrintTitles() {
   let connection;
   try {
     connection = await pool.getConnection();
-    const query = 'SELECT url FROM events WHERE isPastEvent = 0';
+    const query = 'SELECT * FROM events WHERE isPastEvent = 0';
     const rows = await connection.query(query);
 
     const browser = await puppeteer.launch({
@@ -34,13 +35,16 @@ async function openPagesAndPrintTitles() {
     });
 
     const page = await browser.newPage();
-
+    let eventURL;
+    let eventName;
+    let eventTime;
+    let ticketAmount;
     for (const row of rows) {
       const url = row.url;
       if (url) {
         await page.goto(url, { waitUntil: 'domcontentloaded' });
 
-        const result = await page.evaluate(() => {
+        const tickets = await page.evaluate(() => {
             const elementsTest = document.querySelector('div[id*="event_detail_ticket_purchase"] p');
             if (elementsTest) {
                 return elementsTest.textContent?.replace("Available Tickets: ", "").trim();
@@ -48,11 +52,19 @@ async function openPagesAndPrintTitles() {
             return null;
         });
         
-        console.log('Element details:', result);
-        console.log(`Opening URL: ${url}`);
-     
-        const pageTitle = await page.title();
-        console.log(`Page Title: ${pageTitle}`);
+        if (Number(tickets) > 0) {
+          let ticketAmount = `${tickets} ticket(s)`;
+          eventURL = row.url;
+
+          if (eventURL === 'file:///home/megan/Documents/Typescript/lorcana-bluesky/test/index.html') {
+            eventURL = 'https://gencon.com/events/238936';
+          }
+          eventName = row.event_name;
+          eventTime = formatDate(row.event_time);
+
+          const tweetMsg = `${eventName}\n${eventTime}\n${ticketAmount}\n${eventURL}`;
+          formatTweet(tweetMsg);
+        }
       }
     }
 
@@ -62,6 +74,25 @@ async function openPagesAndPrintTitles() {
   } finally {
     if (connection) connection.end();
   }
+}
+
+
+
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+
+  const dayFormatter = new Intl.DateTimeFormat('en-US', { weekday: 'long' });
+  const dayOfWeek = dayFormatter.format(date);
+
+  const timeFormatter = new Intl.DateTimeFormat('en-US', {
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true,
+      timeZoneName: 'short'
+  });
+  const time = timeFormatter.format(date);
+
+  return `${dayOfWeek} ${time}`;
 }
 
 
