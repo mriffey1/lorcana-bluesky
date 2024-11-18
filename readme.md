@@ -34,7 +34,7 @@ The screenshot below shows when an event has been posted via Bluesky's API that 
 
 <div align="center">
 
-<img src="assets/tweet_screenshot.png" alt-text="screen shot of tweet sent out" width="450" alt="screenshot showing tweet example">
+<img src="assets/tweet_screenshot.png" alt-text="screen shot of tweet sent out" width="450" alt="screenshot showing tweet example"> 
 
 </div>
 
