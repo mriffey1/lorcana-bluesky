@@ -30,10 +30,13 @@
 
 This project was created due to the popularity of the up and coming Disney trading card game, Lorcana by Ravensburger. Lorcana debuted at [Gen Con](https://www.gencon.com/) 2023, North America's largest and longest running tabletop convention. The goal was to provide a singular location with the ability to receive real-time notifications of event ticket availability for over 40 events dedicated to Lorcana.
 
-The screenshot below shows when an event has been tweeted that has tickets by providing the name of the event, the date and time, number of tickets available, the direct event link and a timestamp.
+The screenshot below shows when an event has been posted via Bluesky's API that has tickets by providing the name of the event, the date and time, number of tickets available, the direct event link and a timestamp.
 
 <div align="center">
-<img src="assets/tweet_screenshot.png" alt-text="screen shot of tweet sent out" width="450" alt="screenshot showing tweet example">
+
+| ![screen shot of tweet sent out](assets/tweet_screenshot.png) |
+|-|
+
 </div>
 
 <p align="right">
